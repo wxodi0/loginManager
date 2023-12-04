@@ -9,7 +9,7 @@
 <body>
 <%@ include file="header.jsp" %>
 검색조건 : 
-<form name="searchf" action="" method="post" onsubmit="return searchs()">
+<form name="searchf" action="" method="post" onsubmit="searchs()">
     <select name="search">
         <option value="usernm">회원이름</option>
         <option value="userid">회원ID</option>
@@ -97,7 +97,7 @@ function searchs() {
     if(document.searchf.searchId.value == "") {
     	alert("값을 넣어주세요");
         document.searchf.searchId.focus();
-        return false; // 수정: 폼 제출을 막기 위해 false를 반환
+        return false;
     }
 }
 </script>
